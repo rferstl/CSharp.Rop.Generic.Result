@@ -13,10 +13,11 @@ Some problems:
 
 3. type string for the error object in Result<T> brings some nasty things.
 
-4. working with Result<Maybe<T>> is difficult.
+4. working with Result&lt;Maybe&lt;T&gt;&gt; is difficult.
 
 Therefore we have tried to merge the types Result&lt;T&gt; and Maybe&lt;T&gt; to create a three-track railway type.
 
 In C# every function has 3 possible results, a valid object/value, null or an exception.  The return of null is still often used in existing code, e.g. to signal: Not found. 
 
 The generic Result<T> Type presented here is intended to do just that explicitly and provide the necessary operators for further processing that is as "IF" free as possible.
+
