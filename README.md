@@ -21,3 +21,9 @@ In C# every function has 3 possible results, a valid object/value, null or an ex
 
 The generic Result<T> Type presented here is intended to do just that explicitly and provide the necessary operators for further processing that is as "IF" free as possible.
 
+Migration of existing code:
+
+| TB Function(TA a) | Result<TB> Function(TA a) |
+| return null; | return Result.None; |
+| throw new Exception("error message"); | retrun new Error("error message"); |
+| retrun new TB( 1, ""); | retrun new TB( 1, ""); |
