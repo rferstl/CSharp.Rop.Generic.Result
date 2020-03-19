@@ -7,7 +7,7 @@ https://fsharpforfunandprofit.com/rop/ has proven to be very useful in our proje
 
 Some problems:
 
-1. the mixed use of Result<T>, Maybe<T> and Result<Maybe<T>> leads to unsightly code
+1. the mixed use of Result<T>, Maybe&lt;T&gt; and Result&lt;Maybe&lt;T&gt;&gt; leads to unsightly code
 
 2. the generic type Result<T,E> with 2 type parameters is no fun in C#.
 
@@ -15,7 +15,7 @@ Some problems:
 
 4. working with Result<Maybe<T>> is difficult.
 
-Therefore we have tried to merge the types Result<T> and Maybe<T> to create a three-track railway type.
+Therefore we have tried to merge the types Result&lt;T&gt; and Maybe&lt;T&gt; to create a three-track railway type.
 
 In C# every function has 3 possible results, a valid object/value, null or an exception.  The return of null is still often used in existing code, e.g. to signal: Not found. 
 
