@@ -1,6 +1,6 @@
 # CSharp.Rop.Generic.Result
 
-This library started as a copy of the excellent library of Vladimir Khorikov [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions). 
+This library ). 
 
 The idea of "Railway Oriented Programming" by Scott Vlashin 
 https://fsharpforfunandprofit.com/rop/ has proven to be very useful in our project.
@@ -27,15 +27,15 @@ The generic `Result<T>` Type presented here is intended to do just that explicit
 the three-tracks of our railway
 
 ```CSharp
-public partial struct Result<T> 
+public struct Result<T> 
 {
     private readonly Error _error;
     private readonly T _value;
 
     public bool IsFailure { get; }
-    public bool IsSuccess => !IsFailure
+    public bool IsSuccess => !IsFailure;
     public bool HasValue { get; }
-    public bool IsNone => IsSuccess && !HasValue
+    public bool IsNone => IsSuccess && !HasValue;
 ````
 
 Migration of existing functions:
