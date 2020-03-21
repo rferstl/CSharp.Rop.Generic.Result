@@ -1,11 +1,11 @@
 # CSharp.Rop.Generic.Result
 
-This library ). 
+This library started as a copy of the excellent library of Vladimir Khorikov [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions). 
 
 The idea of "Railway Oriented Programming" by Scott Vlashin 
 https://fsharpforfunandprofit.com/rop/ has proven to be very useful in our project.
 
-Some chnages:
+Some chnages to the original:
 
 1. merge `Result<T>`, `Maybe<T>` to one type `Result<T>` (logical equal to `Result<Maybe<T>>`)
 2. no generic type `Result<T,E>` with 2 type parameters. 
