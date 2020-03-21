@@ -1,6 +1,6 @@
 # CSharp.Rop.Generic.Result
 
-This this library started as a copy of the excellent library of Vladimir Khorikov [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions). 
+This library started as a copy of the excellent library of Vladimir Khorikov [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions). 
 
 The idea of "Railway Oriented Programming" by Scott Vlashin 
 https://fsharpforfunandprofit.com/rop/ has proven to be very useful in our project.
