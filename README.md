@@ -54,7 +54,35 @@ before | after
 ![start](images/margin_start.png)![OnFailure](images/OnFailure.png)![OnFailureCompensate](images/OnFailureCompensate.png)![Elvis_Coalesce](images/Elvis_Coalesce.png)![end](images/margin_end.png)  
 ![start](images/margin_start.png)![MatchBind](images/MatchBind.png)![Match](images/Match.png)![end](images/margin_end.png)  
 
-####
+
+#### Usage:
+
+```CSharp
+    public static Result<Email> Create(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return Result.None;
+ 
+        string email = input.Trim();
+ 
+        if (email.Length > 256)
+            return Errors.General.ValueIsTooLong;
+ 
+        if (!Regex.IsMatch(email, @"^(.+)@(.+)$"))
+            return Errors.General.ValueIsInvalid;
+ 
+        return new Email(email);
+    }
+
+    public static class Errors
+    {
+        public static class General
+        {
+            public static readonly Error ValueIsTooLong = new Error("value too long");
+            public static readonly Error ValueIsInvalid = new Error("value is invalid");
+        }
+    }
+```
 
 
 
