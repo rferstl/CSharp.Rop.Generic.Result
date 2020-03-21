@@ -1,4 +1,4 @@
-# CSharp.Rop.Generic.Result
+# CSharp.Rop.GenericResult
 
 This library started as a copy of the excellent library of Vladimir Khorikov [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions). 
 
