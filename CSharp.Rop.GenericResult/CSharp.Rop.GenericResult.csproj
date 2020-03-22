@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Result\ValueOrDefault.cs" />
     <Compile Include="Result\IOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result\EnsureWhere.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Result\None.cs" />
     <Compile Include="Result\IfNoneFail.cs" />
     <Compile Include="Result\OnFailure.cs" />
+    <Compile Include="Result\Elvis_Coalesce.cs" />
     <Compile Include="Result\OnFailureCompensate.cs" />
     <Compile Include="Result\OnSuccessTry.cs" />
     <Compile Include="Result\Result.cs" />
