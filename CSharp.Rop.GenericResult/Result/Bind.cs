@@ -26,7 +26,7 @@ namespace CSharp.Rop.GenericResult
         public static Result<TK> Bind<TK>(this Result result, [NotNull] Func<Result<TK>> func)
         {
             if (result.IsFailure)
-                return Result.Failure<TK>(result.Error);
+                return result.Error;
 
             return func();
         }
@@ -37,7 +37,7 @@ namespace CSharp.Rop.GenericResult
         public static Result Bind<T>(this Result<T> result, [NotNull] Func<T, Result> func)
         {
             if (result.IsFailure)
-                return Result.Failure(result.Error);
+                return result.Error;
 
             return func(result.Value);
         }

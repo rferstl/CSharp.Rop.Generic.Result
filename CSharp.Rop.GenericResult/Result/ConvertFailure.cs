@@ -9,7 +9,7 @@ namespace CSharp.Rop.GenericResult
             if (IsSuccess)
                 throw new InvalidOperationException(Messages.ConvertFailureExceptionOnSuccess);
 
-            return Failure<TK>(Error);
+            return Error;
         }
     }
 
@@ -21,7 +21,7 @@ namespace CSharp.Rop.GenericResult
             if (IsSuccess)
                 throw new InvalidOperationException(Result.Messages.ConvertFailureExceptionOnSuccess);
 
-            return Result.Failure(Error);
+            return Error;
         }
 
         public Result<TK> ConvertFailure<TK>()
@@ -29,7 +29,7 @@ namespace CSharp.Rop.GenericResult
             if (IsSuccess)
                 throw new InvalidOperationException(Result.Messages.ConvertFailureExceptionOnSuccess);
 
-            return Result.Failure<TK>(Error);
+            return Error;
         }
     }
 }

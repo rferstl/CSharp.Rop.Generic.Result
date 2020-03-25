@@ -15,12 +15,12 @@ namespace CSharp.Rop.GenericResult
         public Error Error => IsFailure ? _error : throw new ResultSuccessException();
 
         private readonly T _value;
-        public T Value => IsSuccess && HasValue ? _value : throw new ResultFailureException(Error.Message);
+        public T Value => IsSuccess ? HasValue ? _value : throw new ResultNoneException() : throw new ResultFailureException(Error.Message);
 
         public static Result<T> None => new Result<T>(false, default(Error), false, default(T));
 
         public bool HasValue { get; }
-        public bool IsNone => !HasValue;
+        public bool IsNone => IsSuccess && !HasValue;
 
         internal Result(bool isFailure, Error error, bool hasValue, T value)
         {

@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Result\Check.cs" />
+    <Compile Include="Result\ResultNoneException.cs" />
     <Compile Include="Result\ValueOrDefault.cs" />
     <Compile Include="Result\IOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

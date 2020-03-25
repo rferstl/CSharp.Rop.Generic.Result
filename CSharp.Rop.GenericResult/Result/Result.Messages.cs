@@ -10,6 +10,9 @@
             public static readonly string ValueIsInaccessibleForFailure =
                 "You attempted to access the Value property for a failed result. A failed result has no Value.";
 
+            public static readonly string ValueIsInaccessibleForNone =
+                "You attempted to access the Value property for none result. A none result has no Value.";
+
             public static readonly string ErrorObjectIsNotProvidedForFailure =
                 "You attempted to create a failure result, which must have an error, but a null error object (or empty string) was passed to the constructor.";
 

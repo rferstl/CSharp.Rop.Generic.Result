@@ -7,9 +7,16 @@ namespace CSharp.Rop.GenericResult
         public string Error { get; }
 
         internal ResultFailureException(string error)
-            : base(Result.Messages.ValueIsInaccessibleForFailure)
+            : base(Result.Messages.ValueIsInaccessibleForFailure, new ErrorException(error))
         {
             Error = error;
+        }
+    }
+
+    public class ErrorException : Exception
+    {
+        public ErrorException(string error) : base(error)
+        {
         }
     }
 }
